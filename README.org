@@ -1,0 +1,54 @@
+#+title: Sk4rd's DWM Config
+
+* Installation
+
+** Starting
+*** StartX
+In order to start dwm using =startx=, you'll need to put the following
+into your =~/.xinitrc=
+#+begin_src conf
+  exec dwm
+#+end_src
+
+*** Display Manager
+To start dwm with a display manager (like =lightdm= etc.), you'll need
+to create a desktop file called =dwm.desktop= in
+=/usr/share/xsessions/dwm.desktop=
+#+begin_src conf
+  [Desktop Entry]
+  Encoding=UTF-8
+  Name=dwm
+  Comment=Dynamic window manager
+  Exec=dwm
+  Icon=dwm
+  Type=XSession
+#+end_src
+
+** Dependencies
+Before installing dwm, you'll have to install some prerequisites:
+- =libX11=
+- =libXft=
+- =libXinerama=
+- =make=
+- =xinit=
+- =xorg=
+  
+*** Arch Linux
+#+begin_src sh
+  sudo pacman -Sy --noconfirm make xorg libx11 libxft libxinerama xorg-xinit
+#+end_src
+
+*** Ubuntu/Debian
+#+begin_src sh
+  sudo apt-get -y install make xorg libx11-xcb1 libxft-dev libxinerama-dev xinit
+#+end_src
+
+*** Fedora
+#+begin_src sh
+  sudo dnf install -y make xorg libX11-devel libXft-devel libXinerama-devel xorg-x11-xinit
+#+end_src
+
+*** Void Linux
+#+begin_src sh
+  sudo xbps-install -Sy make xorg-x11-server-Xorg base-devel libX11-devel libXft-devel libXinerama-devel xinit
+#+end_src
