@@ -2,28 +2,6 @@
 
 * Installation
 
-** Starting
-*** StartX
-In order to start dwm using =startx=, you'll need to put the following
-into your =~/.xinitrc=
-#+begin_src conf
-  exec dwm
-#+end_src
-
-*** Display Manager
-To start dwm with a display manager (like =lightdm= etc.), you'll need
-to create a desktop file called =dwm.desktop= in
-=/usr/share/xsessions/dwm.desktop=
-#+begin_src conf
-  [Desktop Entry]
-  Encoding=UTF-8
-  Name=dwm
-  Comment=Dynamic window manager
-  Exec=dwm
-  Icon=dwm
-  Type=XSession
-#+end_src
-
 ** Dependencies
 Before installing dwm, you'll have to install some prerequisites:
 - =libX11=
@@ -51,4 +29,26 @@ Before installing dwm, you'll have to install some prerequisites:
 *** Void Linux
 #+begin_src sh
   sudo xbps-install -Sy make xorg-x11-server-Xorg base-devel libX11-devel libXft-devel libXinerama-devel xinit
+#+end_src
+
+* Starting
+** StartX
+In order to start dwm using =startx=, you'll need to put the following
+into your =~/.xinitrc=
+#+begin_src conf
+  exec dwm
+#+end_src
+
+** Display Manager
+To start dwm with a display manager (like =lightdm= etc.), you'll need
+to create a desktop file called =dwm.desktop= in
+=/usr/share/xsessions/dwm.desktop=
+#+begin_src conf
+  [Desktop Entry]
+  Encoding=UTF-8
+  Name=dwm
+  Comment=Dynamic window manager
+  Exec=dwm
+  Icon=dwm
+  Type=XSession
 #+end_src
