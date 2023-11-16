@@ -30,6 +30,7 @@ Before installing dwm, you'll have to install some prerequisites:
 #+begin_src sh
   sudo emerge -av sys-devel/make x11-base/xorg-server x11-libs/libX11 x11-libs/libXinerama x11-libs/libXft x11-apps/xinit
 #+end_src
+
 *** Void Linux
 #+begin_src sh
   sudo xbps-install -Sy make xorg-x11-server-Xorg base-devel libX11-devel libXft-devel libXinerama-devel xinit
